@@ -1,0 +1,2 @@
+{"message":"This is an error ❌ log","level":"error","timestamp":"2024-02-14T22:40:48.174Z"}
+{"message":"This is a fatal 🆘 log","level":"debug","timestamp":"2024-02-14T22:40:48.174Z"}
