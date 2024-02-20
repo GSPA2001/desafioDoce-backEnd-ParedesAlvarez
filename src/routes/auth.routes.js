@@ -265,4 +265,32 @@ router.post("/restore",
   }
 );
 
+/*router.post("/recover-password", async (req, res) => {
+  try {
+    const { email } = req.body;
+    const user = await userModel.findOne({ email });
+
+    if (!user) {
+      return res.status(404).send({ status: "ERR", data: "User not found" });
+    }
+
+    const token = createHash(user._id.toString() + Date.now().toString());
+    user.recoveryToken = token;
+    await user.save();
+
+    const link = `http://localhost:3000/reset-password/${token}`;
+    const subject = "Password Recovery";
+    const html = `<p>Click the following link to reset your password:</p><a href="${link}">Reset Password</a>`;
+    const result = await sendEmail(email, subject, html);
+
+    if (result.status === "ERR") {
+      return res.status(500).send({ status: "ERR", data: result.data });
+    }
+
+    res.status(200).send({ status: "OK", data: "Password recovery email sent" });
+  } catch (err) {
+    res.status(500).send({ status: "ERR", data: err.message });
+  }
+});*/
+
 export default router;

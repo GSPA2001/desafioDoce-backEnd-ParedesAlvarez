@@ -11,6 +11,7 @@ const schema = new mongoose.Schema({
   purchase_datetime: {type: Date, default: Date.now },
   amount: {type: Number,required: true },
   purchaser: {type: String,required: true },
+  //purchaser: { type: mongoose Schema. Types.ObjectId, required: true, ref: 'users' },
 });
 
 export default mongoose.model(collection, schema);

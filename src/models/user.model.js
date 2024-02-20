@@ -12,7 +12,7 @@ const schema = new mongoose.Schema({
     age: { type: Number },
     password: { type: String, required: true },
     cart: { type: mongoose.Schema.Types.ObjectId },
-    rol: { type: String, enum: ['user','ADMIN'],default:'user'}
+    rol: { type: String, enum: ['user', 'premium', 'ADMIN'], default: 'user' }
 });
 
 // Importamos mongoose-paginate-v2 y lo activamos como plugin, para tener disponible

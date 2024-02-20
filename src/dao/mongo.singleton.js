@@ -10,9 +10,9 @@ export default class MongoSingleton {
     static getInstance(mongoose_URL = process.env.MONGOOSE_URI) {
         if (!this.#instance) {
             this.#instance = new MongoSingleton(mongoose_URL);
-            console.log('Conexión bbdd CREADA ✅');
+            //console.log('Conexión bbdd CREADA ✅');
         } else {
-            console.log('Conexión bbdd RECUPERADA 🔌');
+            //console.log('Conexión bbdd RECUPERADA 🔌');
         }
 
         return this.#instance;

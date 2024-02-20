@@ -28,7 +28,7 @@ export class UserController {
     async generateMockUsers(qty){
         const mockCarts = [];
         const mockUsers = [];
-        const possibleRoles = ['user','ADMIN'];
+        const possibleRoles = ['user','premium','ADMIN'];
         for (let i = 0; i < qty; i++){
             const carts = {
                 _id:faker.database.mongodbObjectId(),
