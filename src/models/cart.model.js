@@ -12,7 +12,7 @@ const schema = new mongoose.Schema({
 })
 
 schema.pre('find', function() {
-    this.populate({ path: 'products', model: productModel })
+    this.populate({ path: 'products.pid', model: productModel })
 })
 
 export default mongoose.model(collection, schema)
