@@ -265,7 +265,7 @@ router.post("/restore",
   }
 );
 
-/*router.post("/recover-password", async (req, res) => {
+router.post("/recover", async (req, res) => {
   try {
     const { email } = req.body;
     const user = await userModel.findOne({ email });
@@ -279,7 +279,7 @@ router.post("/restore",
     await user.save();
 
     const link = `http://localhost:3000/reset-password/${token}`;
-    const subject = "Password Recovery";
+    const subject = "Password Recover";
     const html = `<p>Click the following link to reset your password:</p><a href="${link}">Reset Password</a>`;
     const result = await sendEmail(email, subject, html);
 
@@ -291,6 +291,6 @@ router.post("/restore",
   } catch (err) {
     res.status(500).send({ status: "ERR", data: err.message });
   }
-});*/
+});
 
 export default router;

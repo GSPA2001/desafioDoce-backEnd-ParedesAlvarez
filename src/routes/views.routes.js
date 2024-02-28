@@ -141,6 +141,10 @@ router.get("/chat", async (req, res) => {
   }
 });
 
+router.get("/recover", async (req, res) => {
+  res.render("recover", {});
+});
+
 // Rutas get, post, delete para la página de productos en tiempo real
 router.get("/realTimeProducts", async (req, res) => {
   res.logger.info('Accediendo a la página de productos en tiempo real ⏱️..');
@@ -158,6 +162,7 @@ router.get("/realTimeProducts", async (req, res) => {
     res.status(500).json({ status: "error", error: err.message });
   }
 });
+
 //para ver el producto nuevo refrescar pagina 
 router.post("/api/products", async (req, res) => {
   const { title, description, price, thumbnail, code, category, stock } = req.body;
