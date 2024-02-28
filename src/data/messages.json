@@ -1,82 +1,44 @@
 [
   {
-    "user": "logan",
-    "message": "Hola alguien conectado?",
-    "createdAt": {
-      "$date": "2024-01-16T22:53:09.074Z"
-    },
-    "updatedAt": {
-      "$date": "2024-01-16T22:53:09.074Z"
-    }
-  },
-  {
-    "user": "Cinty",
-    "message": "Hola yo estoy",
-    "createdAt": {
-      "$date": "2024-01-16T22:53:33.201Z"
-    },
-    "updatedAt": {
-      "$date": "2024-01-16T22:53:33.201Z"
-    }
-  },
-  {
-    "user": "logan",
-    "message": "Genial se ve una vez el mensaje",
-    "createdAt": {
-      "$date": "2024-01-16T22:53:44.520Z"
-    },
-    "updatedAt": {
-      "$date": "2024-01-16T22:53:44.520Z"
-    }
-  },
-  {
-    "user": "Cinty",
-    "message": "Si se ve perfecto",
-    "createdAt": {
-      "$date": "2024-01-16T22:53:52.265Z"
-    },
-    "updatedAt": {
-      "$date": "2024-01-16T22:53:52.265Z"
-    }
+    "user": "Coder",
+    "message": "Hola, a todos",
+    "createdAt": "2024-02-28T12:24:22.694+00:00",
+    "updatedAt":"2024-02-28T12:24:22.694+00:00"
   },
   {
     "user": "Juan",
-    "message": "Hola cinty",
-    "createdAt": {
-      "$date": "2024-01-16T23:00:17.865Z"
-    },
-    "updatedAt": {
-      "$date": "2024-01-16T23:00:17.865Z"
-    }
+    "message": "Hola, ¿cómo estás?",
+    "createdAt": "2024-01-16T23:01:04.112+00:00",
+    "updatedAt": "2024-01-16T23:01:04.112+00:00"
   },
   {
-    "user": "cinty",
-    "message": "Hola Juan (cambio io)",
-    "createdAt": {
-      "$date": "2024-01-16T23:00:54.395Z"
-    },
-    "updatedAt": {
-      "$date": "2024-01-16T23:00:54.395Z"
-    }
+    "user": "Coder",
+    "message": "Hola Juan, estoy bien, ¿tú?",
+    "createdAt": "2024-01-16T23:02:10.215+00:00",
+    "updatedAt": "2024-01-16T23:02:10.215+00:00"
   },
   {
     "user": "Juan",
-    "message": "Se sigue viendo bien",
-    "createdAt": {
-      "$date": "2024-01-16T23:01:04.112Z"
-    },
-    "updatedAt": {
-      "$date": "2024-01-16T23:01:04.112Z"
-    }
+    "message": "Bien también, ¿qué has estado haciendo?",
+    "createdAt": "2024-01-16T23:03:20.319+00:00",
+    "updatedAt": "2024-01-16T23:03:20.319+00:00"
   },
   {
-    "user": "cinty",
-    "message": "perfecto",
-    "createdAt": {
-      "$date": "2024-01-16T23:01:11.379Z"
-    },
-    "updatedAt": {
-      "$date": "2024-01-16T23:01:11.379Z"
-    }
+    "user": "Coder",
+    "message": "He estado trabajando en algunos proyectos interesantes. ¿Y tú?",
+    "createdAt": "2024-01-16T23:04:35.421+00:00",
+    "updatedAt": "2024-01-16T23:04:35.421+00:00"
+  },
+  {
+    "user": "Juan",
+    "message": "Yo también he estado ocupado con el trabajo. ¿Has escuchado algo sobre la nueva actualización de software?",
+    "createdAt": "2024-01-16T23:05:45.523+00:00",
+    "updatedAt": "2024-01-16T23:05:45.523+00:00"
+  },
+  {
+    "user": "Coder",
+    "message": "Sí, he estado siguiendo las noticias al respecto. Parece prometedor.",
+    "createdAt": "2024-01-16T23:07:02.624+00:00",
+    "updatedAt": "2024-01-16T23:07:02.624+00:00"
   }
 ]

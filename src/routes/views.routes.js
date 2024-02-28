@@ -11,7 +11,7 @@ const controller = new ProductController();
 const userController = new UserController();
 
 router.get("/", catcher(async (req, res) => {
-  res.logger.warning('Buscando productos .🔎..');
+  //res.logger.warning('Buscando productos .🔎..');
   try {
     const allProducts = await productModel.find().lean().exec();
     console.log(allProducts.map((item) => item._id));
@@ -124,7 +124,7 @@ router.get("/register", async (req, res) => {
 
 // Ruta para la página de chat
 router.get("/chat", async (req, res) => {
-  res.logger.info('Accediendo a la página de chat 💬..');
+  //res.logger.info('Accediendo a la página de chat 💬..');
   try {
     // Verifica si hay un usuario logueado
     if (req.user) {
@@ -147,7 +147,7 @@ router.get("/recover", async (req, res) => {
 
 // Rutas get, post, delete para la página de productos en tiempo real
 router.get("/realTimeProducts", async (req, res) => {
-  res.logger.info('Accediendo a la página de productos en tiempo real ⏱️..');
+  //res.logger.info('Accediendo a la página de productos en tiempo real ⏱️..');
   try {
     // Verificar si el usuario está logueado y tiene el rol de administrador
     if (req.user && req.user.rol === 'ADMIN') {
