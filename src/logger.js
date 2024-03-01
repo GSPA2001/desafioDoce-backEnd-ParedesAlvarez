@@ -64,7 +64,7 @@ const devLogger = winston.createLogger({
 });
 
 const prodLogger = winston.createLogger({
-  level: "info",
+  level: "error",
   levels: customLevels.levels,
   transports: [
     new winston.transports.Console({
@@ -72,34 +72,16 @@ const prodLogger = winston.createLogger({
       format: winston.format.combine(
         winston.format.label({ label: "production" }),
         winston.format.timestamp(),
-        winston.format.printf(({ level, message, timestamp, label }) => {
-          let colorizedMessage = message;
-          if (level === "error" || level === "fatal") {
-            colorizedMessage = chalk.red(message);
-          } else if (level === "warning") {
-            colorizedMessage = chalk.yellow(message);
-          } else if (level === "info") {
-            colorizedMessage = chalk.green(message);
-          } else if (level === "debug" || level === "http") {
-            colorizedMessage = chalk.blue(message);
-          }
-          return `${label} [${customLevels.levelNames[getLevel(level)]}] ${timestamp} ${colorizedMessage}`;
-        })
+        winston.format.prettyPrint(),
       ),
     }),
     new winston.transports.File({
-      level: "error",
+      level: "info",
       filename: `${__dirname}/logs/errors.log`,
       format: winston.format.combine(
         winston.format.label({ label: "production" }),
         winston.format.timestamp(),
-        winston.format.printf(({ level, message, timestamp, label }) => {
-          return JSON.stringify({
-            message: message,
-            level: customLevels.levelNames[getLevel(level)],
-            timestamp: timestamp,
-          });
-        })
+        winston.format.prettyPrint(),
       ),
     }),
   ],
@@ -108,7 +90,10 @@ const prodLogger = winston.createLogger({
 export const addLogger = (req, res, next) => {
   req.logger =
     config.MODE === "devel" ? devLogger : prodLogger;
-  req.logger.http(`${new Date().toDateString()} ${req.method} ${req.url}`, { message: `${req.method} ${req.url}` });
+  req.logger.http(
+    `${new Date().toDateString()} ${req.method} ${req.url}`,
+    { message: `${req.method} ${req.url}` }
+  );
   next();
 };
 

@@ -88,6 +88,7 @@ app.use("/api/users", usersRouter);
 app.use("/api/orders", ordersRouter);
 app.use("/api/cookies", cookiesRouter);
 app.use("/api/sessions", sessionsRouter);
+//app.use("/api/auth/recover", recoverPasswordRouter);
 app.get("/mockingproducts", (req, res) => getMockingProducts(req, res));
 
 // Configuración de Mongoose

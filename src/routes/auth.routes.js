@@ -278,7 +278,7 @@ router.post("/recover", async (req, res) => {
     user.recoveryToken = token;
     await user.save();
 
-    const link = `http://localhost:3000/reset-password/${token}`;
+    const link = `http://localhost:8080/reset-password/${token}`;
     const subject = "Password Recover";
     const html = `<p>Click the following link to reset your password:</p><a href="${link}">Reset Password</a>`;
     const result = await sendEmail(email, subject, html);
